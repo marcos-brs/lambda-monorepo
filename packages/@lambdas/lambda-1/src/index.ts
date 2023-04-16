@@ -1,15 +1,17 @@
-import { FileUploader } from '@common-infra/file-uploader';
+import { FileUploader, FileUploaderAwsAdapter } from '@common-infra/file-uploader';
 import type { Context, APIGatewayProxyResult, APIGatewayEvent } from 'aws-lambda';
 
-const fileUploader = new FileUploader();
+const fileUploader = new FileUploaderAwsAdapter();
 
-class LambdaHandler {
+export class LambdaHandler {
   constructor(private readonly fileUploader: FileUploader) {
     this.fileUploader = fileUploader;
   }
 
   async main(event: APIGatewayEvent, context: Context): Promise<APIGatewayProxyResult>{
-    this.fileUploader.main(event);
+    if(event.body) {
+        this.fileUploader.upload(event.body?.toString(), 'any_destination');
+    }
 
     return {
         statusCode: 200,

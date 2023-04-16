@@ -1,5 +1,2 @@
-export class FileUploader {
-  main(data: any): void {
-    console.log(data);
-  }
-}
+export * from './adapters/file-uploader-aws.adapter';
+export * from './ports/file-uploader.port'
