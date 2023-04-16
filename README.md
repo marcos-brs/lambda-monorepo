@@ -8,14 +8,14 @@
 
 ## How to use
 1. `bootstrap:dev`: install all dependencies
-2. `bootstrap:prod`: install olly production dependencies
+2. `bootstrap:prod`: install only production dependencies
 3. `build`: build all npm projects inside `packages` folder with `tsc`
 4. `start:dev`: start a webserver with all the lambdas (need to run `build` first)
 5. `cdk bootstrap`: define all the resources that will be needed to deploy the application
 6. `cdk deploy`: deploy the application (NO need run `cdk bootstrap` first)
 7. `cdk destroy`: remove all the resources created by the stack
 
-  Note: To run `cdk` commands you need to install `Docker` and have an aws account set up via the aws cli
+  Note: To run `cdk` commands you need to install `Docker` and have an aws account setuped via the aws cli
 
 ## Folder structure
 
