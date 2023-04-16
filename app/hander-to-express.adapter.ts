@@ -1,4 +1,4 @@
-import { Response, Request, NextFunction } from 'express';
+import type { Response, Request, NextFunction } from 'express';
 
 export const handlerToExpress = (handler: any) => async (
   req: Request,
@@ -7,9 +7,9 @@ export const handlerToExpress = (handler: any) => async (
 ) => {
   try {
     const response = await handler(req, {});
-    res.status(response.statusCode).send(response.body);
+    res.status(response.statusCode).send(response.body)
   } catch (error) {
-    console.error(error)
+    console.error(error);
     next(error);
   }
 };

@@ -1,5 +1,5 @@
 export class FileUploader {
-  main(data: any) {
+  main(data: any): void {
     console.log(data);
   }
 }

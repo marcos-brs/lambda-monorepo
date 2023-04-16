@@ -31,6 +31,7 @@
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.11",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
     "aws-cdk": "2.63.2",
     "aws-sdk": "^2.1359.0",
     "eslint": "^8.38.0",

@@ -36,6 +36,6 @@
 - [ ] Create adapters for lambdas invoked by SQS
 - [ ] Use `esbuild` instead of `tsc` to not be necessary use `Docker` on `cdk bootstrap` proccess
 - [ ] CI/CD by enviroment
-- [ ] Fix eslint to run in all projects
+- [x] Fix eslint to run in all projects
 - [ ] Make some example tests
 - [ ] Add husky + commitlinter

@@ -6,6 +6,7 @@ const app = express();
 
 for (const { route, allowedMethods, handler } of lambdas) {
     for (const method of allowedMethods)
+        // eslint-disable-next-line @typescript-eslint/no-misused-promises
         app[method]('/'+route, handlerToExpress(handler));
 }
 

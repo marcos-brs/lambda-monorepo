@@ -1,5 +1,5 @@
 import { FileUploader } from '@common-infra/file-uploader';
-import { Context, APIGatewayProxyResult, APIGatewayEvent } from 'aws-lambda';
+import type { Context, APIGatewayProxyResult, APIGatewayEvent } from 'aws-lambda';
 
 const fileUploader = new FileUploader();
 
@@ -7,6 +7,7 @@ class LambdaHandler {
   constructor(private readonly fileUploader: FileUploader) {
     this.fileUploader = fileUploader;
   }
+
   async main(event: APIGatewayEvent, context: Context): Promise<APIGatewayProxyResult>{
     this.fileUploader.main(event);
 
