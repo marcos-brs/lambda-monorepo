@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@common-domain/*": ["packages/@common-domain/*/src"],
+      "@common-infra/*": ["packages/@common-infra/*/src"],
+      "@lambdas/*": ["packages/@lambdas/*/src"]
+    }
+  }
+}

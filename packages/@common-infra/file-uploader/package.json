@@ -1,0 +1,20 @@
+{
+  "name": "@common-infra/file-uploader",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "directories": {
+    "lib": "src",
+    "bin": "dist"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf ./dist",
+    "compile": "tsc -p tsconfig.build.json"
+  }
+}
