@@ -37,5 +37,5 @@
 - [x] Use `esbuild` instead of `tsc` to not be necessary use `Docker` on `cdk bootstrap` proccess
 - [ ] CI/CD by enviroment
 - [x] Fix eslint to run in all projects
-- [ ] Make some example tests
+- [x] Make some example tests
 - [ ] Add husky + commitlinter
