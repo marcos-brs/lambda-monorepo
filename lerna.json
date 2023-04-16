@@ -3,7 +3,7 @@
   "packages": [
     "packages/@common-domain/*",
     "packages/@common-infra/*",
-    "packages/@/*"
+    "packages/@lambdas/*"
   ],
   "useWorkspaces": true,
   "version": "independent"
