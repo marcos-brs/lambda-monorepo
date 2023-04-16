@@ -21,7 +21,7 @@
     "bootstrap:dev": "lerna bootstrap",
     "bootstrap:prod": "lerna bootstrap -- --production --no-optional",
     "build": "lerna run build --stream --no-bail",
-    "lint": "eslint '*/**/src/*.{js,ts}'",
+    "lint": "eslint '*/**/*.ts'",
     "lint:fix": "eslint '*/**/src/*.{js,ts}' --fix",
     "test": "lerna run test --stream --no-bail"
   },

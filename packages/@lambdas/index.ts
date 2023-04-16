@@ -3,7 +3,7 @@ import { handler as lambda1Handler } from "./lambda-1";
 
 interface Lambda {
     route: string;
-    allowedMethods: ('get' | 'post' | 'put' | 'delete')[];
+    allowedMethods: Array<'get' | 'post' | 'put' | 'delete'>;
     name: string;
     location: string;
     buildLocation: string;

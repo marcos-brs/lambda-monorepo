@@ -1,6 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
-import { Construct } from 'constructs';
-//import { Function, Runtime, Code } from 'aws-cdk-lib/aws-lambda'
+import type { Construct } from 'constructs';
+// import { Function, Runtime, Code } from 'aws-cdk-lib/aws-lambda'
 import {NodejsFunction, SourceMapMode} from "aws-cdk-lib/aws-lambda-nodejs"
 import path from 'path';
 import { FunctionUrlAuthType, Runtime } from 'aws-cdk-lib/aws-lambda';
@@ -38,7 +38,7 @@ export class LambdaMonorepoStack extends cdk.Stack {
                 allowedOrigins: ['*'],
             }
         });
-
+        
         new cdk.CfnOutput(this, 'FunctionUrl', {
             value: lambdaUrl.url,
            });

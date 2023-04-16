@@ -4,5 +4,4 @@ import * as cdk from 'aws-cdk-lib';
 import { LambdaMonorepoStack } from '../lib/cdk-stack';
 
 const app = new cdk.App();
-new LambdaMonorepoStack(app, 'CdkStack', {
-});
+new LambdaMonorepoStack(app, 'CdkStack', {});
