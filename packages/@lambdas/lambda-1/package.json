@@ -15,7 +15,7 @@
   "scripts": {
     "build": "npm run clean && npm run compile",
     "clean": "rm -rf ./dist",
-    "compile": "tsc -p tsconfig.build.json"
+    "compile": "esbuild --bundle --platform=node --target=es2018 --sourcemap --loader:.ts=ts --outfile=dist/index.js src/index.ts"
   },
   "dependencies": {
     "@common-infra/file-uploader": "*"

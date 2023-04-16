@@ -1,11 +1,27 @@
 {
-  "extends": "./tsconfig.build.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@common-domain/*": ["packages/@common-domain/*/src"],
-      "@common-infra/*": ["packages/@common-infra/*/src"],
-      "@lambdas/*": ["packages/@lambdas/*/src"]
-    }
-  }
+    "compilerOptions": {
+        "target": "ES2019",
+        "module": "CommonJS",
+        "lib": ["ESNext"],
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": true,
+        "types": ["node", "jest"],
+        "preserveConstEnums": true,
+        "paths": {
+            "@common-domain/*": ["packages/@common-domain/*/src"],
+            "@common-infra/*": ["packages/@common-infra/*/src"],
+            "@lambdas/*": ["packages/@lambdas/*/src"]
+        }
+    },
+    "exclude": ["node_modules", "dist"]
 }
