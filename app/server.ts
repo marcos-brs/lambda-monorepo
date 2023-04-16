@@ -1,6 +1,9 @@
 import express from 'express';
 import { handlerToExpress } from './hander-to-express.adapter';
 import { lambdas } from '../packages/@lambdas';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 
