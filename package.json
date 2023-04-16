@@ -16,7 +16,7 @@
     "packages/@lambdas/*"
   ],
   "scripts": {
-    "start:dev": "nodemon --watch 'packages/**' --ext 'ts,js' --exec 'ts-node app/server.ts --transpileOnly'",
+    "start:dev": "nodemon --watch 'packages/**/*' --ext 'ts,js' --exec 'ts-node app/server.ts --transpileOnly'",
     "cdk": "cdk",
     "bootstrap:dev": "lerna bootstrap",
     "bootstrap:prod": "lerna bootstrap -- --production --no-optional",
