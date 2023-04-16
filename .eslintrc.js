@@ -4,9 +4,6 @@ module.exports = {
     node: true,
     jest: true,
   },
-  "import/resolver": {
-    typescript: {}
-  },
   plugins: ["import"],
   extends: ["standard-with-typescript", "prettier"],
   overrides: [],
