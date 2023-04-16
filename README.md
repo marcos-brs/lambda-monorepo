@@ -15,7 +15,7 @@
 6. `cdk deploy`: deploy the application (NO need run `cdk bootstrap` first)
 7. `cdk destroy`: remove all the resources created by the stack
 
-  Note: To run `cdk` commands you need an aws account set up via the aws cli
+  Note: To run `cdk` commands you need to install `Docker` and have an aws account set up via the aws cli
 
 ## Folder structure
 
