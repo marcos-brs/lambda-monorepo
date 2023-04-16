@@ -1,6 +1,6 @@
 import { FileUploaderAwsAdapter } from "@common-infra/file-uploader";
 import { LambdaHandler } from ".";
-import { Context } from "aws-lambda";
+import { type Context } from "aws-lambda";
 
 describe('lambda-1', () => {
     let lambdaHandler: LambdaHandler;
@@ -12,6 +12,7 @@ describe('lambda-1', () => {
     });
 
     it('should return hello-world', async () => {
+        // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
         expect(await lambdaHandler.main({} as any, {} as Context)).toEqual({
             statusCode: 200,
             body: JSON.stringify({
@@ -22,6 +23,7 @@ describe('lambda-1', () => {
 
     it('should call fileUploader.upload', async () => {
         const fileUploaderSpy = jest.spyOn(fileUploader, 'upload');
+        // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
         await lambdaHandler.main({ body: 'any_base64_file' } as any, {} as Context);
         expect(fileUploaderSpy).toHaveBeenCalledWith('any_base64_file', 'any_destination');
     });
