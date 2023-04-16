@@ -32,7 +32,7 @@
 ```
 
 ## TODO
-- [ ] Watch mode to compile package folder in real time
+- [x] Watch mode to compile package folder in real time
 - [ ] Create adapters for lambdas invoked by SQS
 - [x] Use `esbuild` instead of `tsc` to not be necessary use `Docker` on `cdk bootstrap` proccess
 - [ ] CI/CD by enviroment
